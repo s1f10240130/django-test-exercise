@@ -34,6 +34,7 @@ def detail(request, task_id):
     }
     return render(request, 'todo/detail.html', context)
 
+
 def update(request, task_id):
     try:
         task = Task.objects.get(pk=task_id)
@@ -49,3 +50,14 @@ def update(request, task_id):
         'task': task
     }
     return render(request, "todo/edit.heml", context)
+
+
+def close(request, task_id):
+    try:
+        task = Task.objects.get(pk=task_id)
+    except Task.DoesNotExist:
+        raise Http404('Task does not exist')
+    task.completed = True
+    task.save()
+    return redirect(index)
+
