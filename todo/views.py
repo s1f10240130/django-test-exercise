@@ -49,7 +49,7 @@ def update(request, task_id):
     context = {
         'task': task
     }
-    return render(request, "todo/edit.heml", context)
+    return render(request, "todo/edit.html", context)
 
 
 def close(request, task_id):
