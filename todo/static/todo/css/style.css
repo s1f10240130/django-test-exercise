@@ -2,3 +2,12 @@ body {
     background-color :#CCFFCC;
 }
 
+h1{
+    text-align:center;
+    color:#000066;
+}
+
+p{
+    text-align:center;
+    font-family:serif;
+}
