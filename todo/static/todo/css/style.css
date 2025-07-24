@@ -11,3 +11,11 @@ p{
     text-align:center;
     font-family:serif;
 }
+
+.line-menu a{
+    color: #1a73e8;
+}
+
+.link-menu a:hover{
+    color: #FF3300;
+}
